@@ -13,6 +13,14 @@ func main() {
 	mapWithSlice := mapWithSliceValue()
 	fmt.Println(mapWithSlice)
 
+	deleteMap(myMap)
+	fmt.Println(myMap)
+
+}
+
+func deleteMap(sense map[string]int) {
+	//使用delete(map[string]int, mapKey)函数删除map元素   go并没有提供清空map的方法  只有新建一个map
+	delete(sense, "A")
 }
 
 //value为切片类型的map
